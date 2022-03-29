@@ -3,15 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Cinemachine;
 
 public class ChangePlayer : MonoBehaviour
 {
-    
+    private CinemachineVirtualCamera cam;
     // Start is called before the first frame update
     
     void Start()
     {
-        player(index:0);
+        cam=GameObject.FindGameObjectWithTag("camera").GetComponent<CinemachineVirtualCamera>();
+        changePlayer(0);
     }
 
     // Update is called once per frame
@@ -20,7 +22,7 @@ public class ChangePlayer : MonoBehaviour
         
     }
 
-    public void player(int index)
+    public void changePlayer(int index)
     {
         for(int i=0;i<transform.childCount;i++)
         {
@@ -34,6 +36,7 @@ public class ChangePlayer : MonoBehaviour
             {
                 Movement m = transform.GetChild(i).GetComponent<Movement>();
                 m.enabled = true;
+                cam.Follow=m.transform;
             }
         }
       

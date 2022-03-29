@@ -14,7 +14,7 @@ public class SelectPlayer : MonoBehaviour
       parent=transform.parent.GetComponent<ChangePlayer>();
         onPlayerSelected.AddListener(delegate
         {
-            parent.player(index);
+            parent.changePlayer(index);
         });
     }
 
