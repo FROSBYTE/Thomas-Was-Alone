@@ -16,6 +16,13 @@ public class Movement : MonoBehaviour
     private bool canJump = false;
     Rigidbody2D rigidbody;
 
+    [SerializeField]
+    GroundCheckCollision collisionCheck;
+
+    [SerializeField]
+    float gravity = 0.05f;
+    //public bool isGrounded;
+
 
 
 
@@ -30,16 +37,19 @@ public class Movement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         //verticalInput = Input.GetAxis("Vertical");
-        if(!canJump && Input.GetKey(KeyCode.Space))
+        if(!canJump && Input.GetKey(KeyCode.Space) && collisionCheck.isGrounded)
         {
             canJump = true;
         }
+        // Debug.Log(collisionCheck.isGrounded);
+        Debug.Log(canJump);
          
     }
     private void FixedUpdate()
     {
         pos = transform.position;
         pos.x += horizontalInput * movementSpeed * Time.deltaTime;
+
         if (canJump)
         {
             rigidbody.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
@@ -49,6 +59,7 @@ public class Movement : MonoBehaviour
         //Debug.Log(pos);
         this.transform.position = pos;
     }
+  
 
 
 }
