@@ -31,7 +31,7 @@ public class CollisionCheck : MonoBehaviour
     {
         //Happens when Non-PLayable Player is on Top
        
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") )
         {
             isGrounded = true;
            // Debug.Log(isGrounded + "onStay");
@@ -44,6 +44,8 @@ public class CollisionCheck : MonoBehaviour
             isGrounded = false;
         }
     }
+
+    
 
 
 }
