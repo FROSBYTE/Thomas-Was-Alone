@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3439769839889009424}
   - component: {fileID: 3439769839889009426}
   - component: {fileID: 5162166588764193362}
+  - component: {fileID: 7710352133460104380}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -114,6 +115,18 @@ MonoBehaviour:
   onPlayerSelected:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7710352133460104380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3439769839889009429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 382d9e2ac7968b5448f021d295984fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3439769840142488236
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2589657203094888594}
   - component: {fileID: 1329162485315549817}
+  - component: {fileID: 6216540345053600825}
   m_Layer: 0
   m_Name: Groundcheck
   m_TagString: Ground
@@ -253,3 +267,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.03945577}
   m_EdgeRadius: 0
+--- !u!114 &6216540345053600825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401237220420799113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae374f91db55fdb4d8c20f1a4a8784f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrounded: 0

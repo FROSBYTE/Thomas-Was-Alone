@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
     Rigidbody2D rigidbody;
 
     [SerializeField]
-    GroundCheckCollision collisionCheck;
+    private CollisionCheck collisionCheck;
 
     [SerializeField]
     float gravity = 0.05f;
@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        collisionCheck = transform.GetChild(1).GetComponent<CollisionCheck>();
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class Movement : MonoBehaviour
             canJump = true;
         }
         // Debug.Log(collisionCheck.isGrounded);
-        Debug.Log(canJump);
+        //Debug.Log(canJump);
          
     }
     private void FixedUpdate()
