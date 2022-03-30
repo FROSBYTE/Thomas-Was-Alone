@@ -413,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3439769839889009424, guid: a00d69cdd6d03c9439d329ea4beb1b41, type: 3}
       propertyPath: jumpHeight
-      value: 400
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3439769839889009424, guid: a00d69cdd6d03c9439d329ea4beb1b41, type: 3}
       propertyPath: collisionCheck
@@ -515,7 +515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &730768709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -857,6 +857,10 @@ PrefabInstance:
       propertyPath: collisionCheck
       value: 
       objectReference: {fileID: 1744610821}
+    - target: {fileID: 3439769839889009426, guid: a00d69cdd6d03c9439d329ea4beb1b41, type: 3}
+      propertyPath: m_Mass
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3439769839889009429, guid: a00d69cdd6d03c9439d329ea4beb1b41, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -864,6 +868,10 @@ PrefabInstance:
     - target: {fileID: 3439769839889009430, guid: a00d69cdd6d03c9439d329ea4beb1b41, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3439769839889009430, guid: a00d69cdd6d03c9439d329ea4beb1b41, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3439769839889009430, guid: a00d69cdd6d03c9439d329ea4beb1b41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1502,11 +1510,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1846493944310850744, guid: 2a375c695d61d9f4c9ba6e4357ba9edf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 94.605
+      value: 94.60498
       objectReference: {fileID: 0}
     - target: {fileID: 1846493944310850744, guid: 2a375c695d61d9f4c9ba6e4357ba9edf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -22.0805
+      value: -22.080444
       objectReference: {fileID: 0}
     - target: {fileID: 1846493944310850744, guid: 2a375c695d61d9f4c9ba6e4357ba9edf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
