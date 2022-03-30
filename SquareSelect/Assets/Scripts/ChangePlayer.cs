@@ -25,7 +25,7 @@ public class ChangePlayer : MonoBehaviour
 
     public void changePlayer(int index)
     {
-        detachAllConnectedPlayers();
+      
         for(int i=0;i<transform.childCount;i++)
         {
 
@@ -33,7 +33,7 @@ public class ChangePlayer : MonoBehaviour
             {
                 Movement m = transform.GetChild(i).GetComponent<Movement>();
                 m.enabled = false;
-                m.gameObject.tag = "Untagged";
+               // m.gameObject.tag = "Ground";
             }
             else
             {

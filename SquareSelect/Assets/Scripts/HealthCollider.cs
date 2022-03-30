@@ -7,7 +7,7 @@ public class HealthCollider : MonoBehaviour
     public PowerUPEffect power;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
         power.Action(collision.gameObject);
+        Destroy(gameObject);
     }
 }

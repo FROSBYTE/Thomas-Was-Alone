@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         //verticalInput = Input.GetAxis("Vertical");
-        if(!canJump && Input.GetKey(KeyCode.Space) && collisionCheck.isGrounded)
+        if(!canJump && Input.GetKey(KeyCode.Space) &&collisionCheck.isGrounded)
         {
             canJump = true;
         }
@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
 
         if (canJump)
         {
-            rigidbody.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
+            rigidbody.AddForce(new Vector2(0, jumpHeight*Time.deltaTime), ForceMode2D.Impulse);
             /*LeanTween.scale(this.gameObject, new Vector3(1, 1.5f, 1), 1f).scale(this.gameObject, new Vector3(1, 1.5f, 1), 1f);
             LeanTween.ease*/
             //LeanTween.scale(this.gameObject, new Vector3(1, 1f, 1), 1f);
@@ -63,6 +63,7 @@ public class Movement : MonoBehaviour
         //Debug.Log(pos);
         this.transform.position = pos;
     }
+    
   
 
 
