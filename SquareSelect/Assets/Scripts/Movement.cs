@@ -54,6 +54,9 @@ public class Movement : MonoBehaviour
         if (canJump)
         {
             rigidbody.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
+            /*LeanTween.scale(this.gameObject, new Vector3(1, 1.5f, 1), 1f).scale(this.gameObject, new Vector3(1, 1.5f, 1), 1f);
+            LeanTween.ease*/
+            //LeanTween.scale(this.gameObject, new Vector3(1, 1f, 1), 1f);
             canJump = false;
         }
        
