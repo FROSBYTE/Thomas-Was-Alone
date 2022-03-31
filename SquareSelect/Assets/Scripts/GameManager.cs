@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
     }
     public void endGame()
     {
-        Debug.Log("Nice One");
         Invoke("LoadScene", 2f);
 
     }

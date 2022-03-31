@@ -6,18 +6,20 @@ using UnityEngine.UI;
 public class HealthManager : MonoBehaviour
 {
     [SerializeField] float health = 5f;
-     public Slider healthSlider;
+    public Slider healthSlider;
     private float maxHealth = 100f;
+
+
     private void Awake()
     {
-        healthSlider.interactable = false;
-        GameManager.instance.onGameStart.AddListener(delegate
-        {
-            health = maxHealth;
-            DisplayHealth(100f);
-           
-        });
+        health = maxHealth;
+        healthSlider.value = health;
+
+        
     }
+  
+
+ 
 
     public void DisplayHealth(float health)
     {
