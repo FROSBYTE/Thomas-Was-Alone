@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55757f752eb95704dba31a39980f8f88, type: 3}
   m_Name: SlightHealthBuff
   m_EditorClassIdentifier: 
-  amount: 25
+  amount: 15
