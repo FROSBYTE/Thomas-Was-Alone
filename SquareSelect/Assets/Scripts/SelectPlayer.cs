@@ -8,6 +8,10 @@ public class SelectPlayer : MonoBehaviour
     private int index = 0;
     private ChangePlayer parent;
     public UnityEvent onPlayerSelected;
+    public int Index
+    {
+        get { return index; }
+    }
     // Start is called before the first frame update
     void Start()
     {

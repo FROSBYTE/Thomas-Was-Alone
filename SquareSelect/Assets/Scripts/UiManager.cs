@@ -36,15 +36,15 @@ public class UiManager : MonoBehaviour
     }
     void Start()
     {
-       /* playButton.onClick.AddListener(delegate
-        {
-            GameManager.instance.onGameStart?.Invoke();
-        });
-        GameManager.instance.onGameStart.AddListener(delegate
-        {
-            ChangePanel(paneltoActivate: uiPanel.InGameUI);
-        });*/
-
+        /* playButton.onClick.AddListener(delegate
+         {
+             GameManager.instance.onGameStart?.Invoke();
+         });
+         GameManager.instance.onGameStart.AddListener(delegate
+         {
+             ChangePanel(paneltoActivate: uiPanel.InGameUI);
+         });*/
+        Debug.Log(SceneManager.sceneCountInBuildSettings);
     }
 
     // Update is called once per frame
@@ -101,6 +101,8 @@ public class UiManager : MonoBehaviour
 
     public void LevelUp()
     {
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       
     }
 }
