@@ -8,38 +8,41 @@ public class UiManager : MonoBehaviour
 
     public enum uiPanel
     {
-        MenuUI,
+       // MenuUI,
         InGameUI,
         pauseUI,
-        GameOverUI
+       // GameOverUI
     }
     
-    [SerializeField]
+ /*   [SerializeField]
     private Button playButton;
     [SerializeField]
-    GameObject mainMenu;
+    GameObject mainMenu;*/
     [SerializeField]
     GameObject inGameUI;
     [SerializeField]
     GameObject pauseUI;
-    uiPanel currentPanel = uiPanel.MenuUI;
+    uiPanel currentPanel = uiPanel.InGameUI;
     // Start is called before the first frame update
     private void Awake()
     {
         if(instance == null)
-        instance = this;
-        ChangePanel(uiPanel.MenuUI);
+        {
+            instance = this;
+        }
+       
+        ChangePanel(uiPanel.InGameUI);
     }
     void Start()
     {
-        playButton.onClick.AddListener(delegate
+       /* playButton.onClick.AddListener(delegate
         {
             GameManager.instance.onGameStart?.Invoke();
         });
         GameManager.instance.onGameStart.AddListener(delegate
         {
             ChangePanel(paneltoActivate: uiPanel.InGameUI);
-        });
+        });*/
 
     }
 
@@ -63,17 +66,17 @@ public class UiManager : MonoBehaviour
     }
     public void ChangePanel(uiPanel paneltoActivate)
     {
-        if(paneltoActivate == uiPanel.MenuUI)
+      /*  if(paneltoActivate == uiPanel.MenuUI)
         {
             currentPanel = uiPanel.MenuUI;
             mainMenu.SetActive(true);
             inGameUI.SetActive(false);
             pauseUI.SetActive(false);
-        }
-        else if(paneltoActivate == uiPanel.InGameUI)
+        }*/
+        if(paneltoActivate == uiPanel.InGameUI)
         {
             currentPanel=uiPanel.InGameUI;
-            mainMenu.SetActive(false);
+            //mainMenu.SetActive(false);
             inGameUI.SetActive(true);
             pauseUI.SetActive(false);
 
@@ -81,7 +84,7 @@ public class UiManager : MonoBehaviour
         else if(paneltoActivate == uiPanel.pauseUI)
         {
             currentPanel = uiPanel.pauseUI;
-            mainMenu.SetActive(false);
+           // mainMenu.SetActive(false);
             inGameUI.SetActive(false);
             pauseUI.SetActive(true);
 
