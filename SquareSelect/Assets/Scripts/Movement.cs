@@ -59,6 +59,7 @@ public class Movement : MonoBehaviour
 
         if (canJump)
         {
+            AudioManager.Instance.onPlayerJumped?.Invoke();
             rigidbody.velocity = new Vector2(0, jumpHeight);
             //rigidbody.AddForce(new Vector2(0, jumpHeight*Time.deltaTime), ForceMode2D.Impulse);
             /*LeanTween.scale(this.gameObject, new Vector3(1, 1.5f, 1), 1f).scale(this.gameObject, new Vector3(1, 1.5f, 1), 1f);
