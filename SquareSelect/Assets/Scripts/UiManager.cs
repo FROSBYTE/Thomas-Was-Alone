@@ -65,6 +65,7 @@ public class UiManager : MonoBehaviour
         }
 
     }
+ 
     public void ChangePanel(uiPanel paneltoActivate)
     {
       /*  if(paneltoActivate == uiPanel.MenuUI)
@@ -93,6 +94,11 @@ public class UiManager : MonoBehaviour
         }
         
     }
+    public void OnGameResume()
+    {
+        ChangePanel(uiPanel.InGameUI);
+    }
+
     public void LevelUp()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
