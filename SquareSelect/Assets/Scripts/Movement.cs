@@ -41,7 +41,13 @@ public class Movement : MonoBehaviour
         if(!canJump && Input.GetKey(KeyCode.Space) &&collisionCheck.isGrounded)
         {
             canJump = true;
+
         }
+        /*Debug.Log(rigidbody.velocity);
+        if(collisionCheck.isGrounded == false && rigidbody.velocity.y <= 1)
+        {
+            rigidbody.AddForce(new Vector2(0, -90f * Time.deltaTime), ForceMode2D.Impulse);
+        }*/
         // Debug.Log(collisionCheck.isGrounded);
         //Debug.Log(canJump);
          
@@ -53,7 +59,8 @@ public class Movement : MonoBehaviour
 
         if (canJump)
         {
-            rigidbody.AddForce(new Vector2(0, jumpHeight*Time.deltaTime), ForceMode2D.Impulse);
+            rigidbody.velocity = new Vector2(0, jumpHeight);
+            //rigidbody.AddForce(new Vector2(0, jumpHeight*Time.deltaTime), ForceMode2D.Impulse);
             /*LeanTween.scale(this.gameObject, new Vector3(1, 1.5f, 1), 1f).scale(this.gameObject, new Vector3(1, 1.5f, 1), 1f);
             LeanTween.ease*/
             //LeanTween.scale(this.gameObject, new Vector3(1, 1f, 1), 1f);
