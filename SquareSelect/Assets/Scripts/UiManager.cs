@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class UiManager : MonoBehaviour
 {
     public static UiManager instance;
@@ -91,5 +92,9 @@ public class UiManager : MonoBehaviour
 
         }
         
+    }
+    public void LevelUp()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
