@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - groundChecker
   - PlayerHolder
+  - exit
   layers:
   - Default
   - TransparentFX

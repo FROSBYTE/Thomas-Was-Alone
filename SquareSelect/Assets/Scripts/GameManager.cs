@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public UnityEvent onGameStart, OnGameEnd, OnGameWin;
+
     private void Awake()
     {
         if(instance == null)
